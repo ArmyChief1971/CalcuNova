@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liquid Glass Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ambient"></div>
+    <main class="screen-shell" id="appShell">
+      <header class="glass top-bar">
+        <div class="brand">Liquid Calc</div>
+        <div class="theme-switch" role="tablist" aria-label="Theme modes">
+          <button class="chip active" data-theme="dark">Dark</button>
+          <button class="chip" data-theme="light">Light</button>
+          <button class="chip" data-theme="tint">Tint</button>
+          <button class="chip" data-theme="clear">Clear</button>
+        </div>
+      </header>
+
+      <section class="glass display-card">
+        <p class="equation" id="equation">0</p>
+        <h1 class="display" id="display">0</h1>
+      </section>
+
+      <section class="glass history-card" id="historyCard">
+        <h2>History</h2>
+        <ul id="historyList"></ul>
+      </section>
+
+      <section class="keypad" id="keypad"></section>
+
+      <nav class="glass tabbar" id="tabbar">
+        <button class="tab active">Calculator</button>
+        <button class="tab">Memory</button>
+        <button class="tab">Unit</button>
+      </nav>
+    </main>
+
+    <div id="contextAlert" class="context-alert" aria-live="polite"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
